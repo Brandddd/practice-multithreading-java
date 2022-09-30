@@ -10,7 +10,7 @@ package com.example;
 
 /**
  *
- * @author brand
+ * @author Brandon David Palacio Alvarez, Mario Andrés Ramirez, Jefferson Ramirez
  */
 public class ThreadInterrumpedMain {
 
@@ -18,6 +18,9 @@ public class ThreadInterrumpedMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Runnable r = new Counter();
+        Thread t = new Thread(r);
+        t.start();
     }
 
 }
