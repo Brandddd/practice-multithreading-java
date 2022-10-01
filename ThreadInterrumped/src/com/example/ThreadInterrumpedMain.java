@@ -1,5 +1,6 @@
 /*
     Course of multithreading-java-lang
+    Practice 12-2
     Programmed by:
         Brandon Palacio Alvarez
         Mario Andres Ramirez
