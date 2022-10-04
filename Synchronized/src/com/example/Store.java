@@ -32,7 +32,7 @@ public class Store {
         return shirts.size();
     }
     
-    public boolean authorizeCreditCard(String accountNumber, double amount) {
+    public static synchronized boolean authorizeCreditCard(String accountNumber, double amount) {
         //placeholder method to test workflow
         //since this would normally communicate with a external source
         //this method should take longer to execute...
@@ -45,7 +45,7 @@ public class Store {
         } catch (Exception e) {
             System.out.println("El hilo ha sido interrumpido. ");
         }
-        
+
         return true;
     }
 }
