@@ -14,7 +14,6 @@ public class PurchasingAgent {
         Store store = Store.getInstance();
         store.getShirtCount();
 
-        Thread.currentThread(); // !OBTENER UNA REFERENCIA AL HILO
         double thread_id = Thread.currentThread().getId(); // !OBTENER REFERENCIA AL HILO Y SU ID
         String thread_name = Thread.currentThread().getName(); // !OBTENER REFERENCIA AL HILO Y SU NOMBRE
         System.out.println("Hilo ejecutandose con Codigo: " + thread_id + " y Nombre: " + thread_name);
