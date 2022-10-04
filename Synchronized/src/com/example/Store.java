@@ -6,13 +6,13 @@ import java.util.LinkedList;
 public class Store {
 
     private Deque<Shirt> shirts = new LinkedList<>();
-    //singleton
+    // singleton
     private static Store instance = new Store();
-    //singleton
+    // singleton
 
     private Store() {
     }
-    //singleton
+    // singleton
 
     public static Store getInstance() {
         return instance;
@@ -33,12 +33,20 @@ public class Store {
     }
 
     public boolean authorizeCreditCard(String accountNumber, double amount) {
-        //placeholder method to test workflow
-        //since this would normally communicate with a external source
-        //this method should take longer to execute...
+        // placeholder method to test workflow
+        // since this would normally communicate with a external source
+        // this method should take longer to execute...
 
-        //TODO add delaying code here
-        
+        // TODO add delaying code here
+        int seconds = (int) (Math.random() * 3 + 1);
+        System.out.println("Habrá un retraso de " + seconds + " milisegundos. ");
+
+        try {
+            Thread.sleep(seconds);
+        } catch (InterruptedException e) {
+            System.out.println("Ha ocurrido un error. ");
+        }
+
         return true;
     }
 }
