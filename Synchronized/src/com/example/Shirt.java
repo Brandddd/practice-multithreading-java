@@ -7,7 +7,7 @@ public class Shirt{
     private String color = "";
     private String size="";
 
-    private Shirt() { };
+    public Shirt() {};
 
     public Shirt (String id, String description, String color, String size){
         this.id = id;
