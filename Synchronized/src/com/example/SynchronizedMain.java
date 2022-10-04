@@ -2,6 +2,9 @@ package com.example;
 
 public class SynchronizedMain {
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Store store = Store.getInstance();
         store.addShirt(new Shirt("1", "Polo", "Rainbow", "Large"));
