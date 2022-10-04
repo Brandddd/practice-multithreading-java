@@ -6,5 +6,5 @@ public class PracticeThread extends Thread {
     public void run() {
         PurchasingAgent agent = new PurchasingAgent();
         agent.purchase();
-    } 
+    }
 }
