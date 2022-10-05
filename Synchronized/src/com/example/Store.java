@@ -14,39 +14,35 @@ public class Store {
     }
     // singleton
 
-    public static Store getInstance() {
+    public  static Store getInstance() {
         return instance;
     }
 
-    public void addShirt(Shirt shirt) {
+    public  void addShirt(Shirt shirt) {
         System.out.println("Adding a shirt to the store.");
         shirts.push(shirt);
         System.out.println("Total shirts in stock: " + shirts.size());
     }
 
-    public Shirt takeShirt() {
+    public  Shirt takeShirt() {
         return shirts.pop();
     }
 
-    public int getShirtCount() {
+    public  int getShirtCount() {
         return shirts.size();
     }
 
-    public boolean authorizeCreditCard(String accountNumber, double amount) {
+    public  boolean authorizeCreditCard(String accountNumber, double amount) {
         // placeholder method to test workflow
         // since this would normally communicate with a external source
         // this method should take longer to execute...
-
-        // TODO add delaying code here
-        int seconds = (int) (Math.random() * 3 + 1);
-        System.out.println("Habrá un retraso de " + seconds + " milisegundos. ");
-
         try {
+            int seconds = (int) (Math.random() * 3 + 1);
+            System.out.println("Habrá un retraso de " + seconds + " milisegundos. ");
             Thread.sleep(seconds);
         } catch (InterruptedException e) {
             System.out.println("Ha ocurrido un error. ");
         }
-
         return true;
     }
 }
