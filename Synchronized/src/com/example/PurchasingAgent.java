@@ -17,21 +17,23 @@ public class PurchasingAgent {
         super.finalize();
     }
 
-    public static void purchase() {
-
-        System.out.println("Cantidad de instancias de la clase: " + PurchasingAgent.getCantidad()); // *Instancias
-        System.out.println("Hilo ejecutandose con nombre " + Thread.currentThread().getName() + " y codigo "
-                + Thread.currentThread().getId());
-
+    public void purchase() {
+        
         Store store = Store.getInstance(); // *Obteniendo referencia de la clase Store.
+
         store.getShirtCount(); // *Verifica que la tienda tiene al menos una camisa en existencia.
         store.authorizeCreditCard("1234", 15.00); // *Compra con tarjeta de crédito.
         Shirt shirt = store.takeShirt(); // *Tomar una camiseta de la tienda.
+        
+        System.out.println("Cantidad de instancias de la clase: " + PurchasingAgent.getCantidad()); // *Instancias
+        System.out.println("Hilo ejecutandose con nombre " + Thread.currentThread().getName() + " y codigo "
+        + Thread.currentThread().getId());
 
         if (shirt != null) { // *Comprobación
             System.out.println("\nEl pago de: " + shirt + "Se ha realizado exitosamente. ");
+            System.out.println();
         } else {
-            System.out.println("La transacción ha fallado porque ha ocurrido un error. ");
+            System.out.println("No hay stock disponible. ");
         }
     }
 }
