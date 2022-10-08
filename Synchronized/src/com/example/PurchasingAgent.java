@@ -19,6 +19,8 @@ public class PurchasingAgent {
 
     public void purchase() {
         
+        //TODO añadir bloque sincronizado, "synchronized" en el cual entren los dos hilos y estos se sincronicen.
+
         Store store = Store.getInstance(); // *Obteniendo referencia de la clase Store.
 
         store.getShirtCount(); // *Verifica que la tienda tiene al menos una camisa en existencia.
