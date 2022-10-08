@@ -5,6 +5,7 @@ public class PurchasingAgent {
     private static int contador;
 
     public PurchasingAgent() {
+        System.out.println("Creando instancia de la clase... "); // * Creacion de instancia de la clase PurchasingAgent
         contador++;
     }
 
@@ -19,8 +20,6 @@ public class PurchasingAgent {
 
     public void purchase() {
 
-        System.out.println("Cantidad de instancias de la clase: " + PurchasingAgent.getCantidad()); // *Instancias
-
         Thread t = Thread.currentThread();
         System.out.println("Hilo ejecutandose con nombre " + t.getName() + " y codigo " + t.getId());
 
@@ -29,10 +28,10 @@ public class PurchasingAgent {
         synchronized (store) {
             if (store.getShirtCount() > 0 && store.authorizeCreditCard("1234", 15.00)) {
                 Shirt shirt = store.takeShirt(); // * Toma shirt del store */
-                System.out.println("\nEl pago de: " + shirt + "Se ha realizado exitosamente. ");
+                System.out.println("\nEl pago de:\n" + shirt + "Se ha realizado exitosamente. ");
                 System.out.println();
             } else {
-                System.out.println("No hay stock disponible.");
+                System.out.println("No hay stock disponible.\n");
             }
         }
     }
