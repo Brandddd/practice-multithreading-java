@@ -38,8 +38,8 @@ public class Store {
         // this method should take longer to execute...
         try {
             int seconds = (int) (Math.random() * 3 + 1);
-            System.out.println("Habrá un retraso de " + seconds + " milisegundos. ");
-            Thread.sleep(seconds);
+            System.out.println("Habrá un retraso de " + seconds * 1000 + " milisegundos en la ejecución. ");
+            Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
             System.out.println("Ha ocurrido un error. ");
         }
