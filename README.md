@@ -4,7 +4,7 @@ The next code its a implementation of differents practices that will use multith
 
 ## First Program:
 
-Implementation of a PurchaseAgent that can buy a Shirt with 2 Threads Synchronized, you can see program behavior ejecuting file called SynchronizedMain.
+Implementation of a PurchaseAgent that can buy a Shirt with 2 Threads Synchronized, you can see program behavior running file called SynchronizedMain.
 
 ## Second Program:
 
