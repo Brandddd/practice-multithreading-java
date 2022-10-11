@@ -1,6 +1,6 @@
 # Practice MultiThreading Using Java 
 
-The next code its a implementation of differents practices that will use multithread functions in the programming language Java
+The next code its the implementation of 2 differents practices using multithread functions in the programming language Java
 
 ## First Program:
 
