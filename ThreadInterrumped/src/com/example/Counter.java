@@ -1,6 +1,7 @@
 package com.example;
 
-//* Clase Runnable para iniciar el Hilo. */
+//* La interfaz Runnable proporciona un metodo alternativo para la utilización de la clase Thread 
+//* para aquellas instancias que quieran ser ejecutadas como un hilo. */
 public class Counter extends ThreadInterrumpedMain implements Runnable {
 
     public void run() {
