@@ -4,11 +4,14 @@ public class PurchasingAgent {
 
     private static int contador;
 
+    // Crea una instancia de la clase, a su vez cuenta las instancias que contienen
+    // los hilos.
     public PurchasingAgent() {
         System.out.println("Creando instancia de la clase... "); // * Creacion de instancia de la clase PurchasingAgent
         contador++;
     }
 
+    // Contador hilos.
     public static int getCantidad() {
         return contador;
     }
@@ -19,6 +22,8 @@ public class PurchasingAgent {
         super.finalize();
     }
 
+    // Metodo que realiza la compra con los agentes comprados que ingresen, además
+    // de sincronizarlos
     public void purchase() {
 
         Thread t = Thread.currentThread();
