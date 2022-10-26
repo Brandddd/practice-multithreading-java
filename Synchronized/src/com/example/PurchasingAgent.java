@@ -13,6 +13,7 @@ public class PurchasingAgent {
         return contador;
     }
 
+    // Finaliza el hilo, y atrapa el error en caso de que halla un error.
     protected void finalize() throws Throwable {
         contador--;
         super.finalize();
